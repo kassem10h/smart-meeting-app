@@ -12,7 +12,7 @@ using Smart_Meeting.Data;
 namespace Smart_Meeting.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20251023103510_InitialCreate")]
+    [Migration("20251023183930_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -54,19 +54,19 @@ namespace Smart_Meeting.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "299c9a39-144a-4895-8d35-ca7fce111bcc",
+                            Id = "0f3f9b44-a1e2-46b2-8edb-001269f1fe12",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "546fa462-c477-43bb-ae8c-7cd987744012",
+                            Id = "f2f7b5c1-ad48-423d-8021-3907c5beeb8c",
                             Name = "Employee",
                             NormalizedName = "EMPLOYEE"
                         },
                         new
                         {
-                            Id = "cf6384a4-bcb4-4363-bf0b-ff1dee30b380",
+                            Id = "c936f895-fb1a-4e94-98de-b3e1f81e7418",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -234,9 +234,6 @@ namespace Smart_Meeting.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
 
                     b.Property<string>("FirstName")
                         .IsRequired()

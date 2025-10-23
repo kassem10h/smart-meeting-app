@@ -7,9 +7,6 @@ namespace Smart_Meeting.Models
 {
     public class Employee : IdentityUser
     {
-        [Key]
-        public int EmployeeId { get; set; }
-
         public string? Role { get; set; } = "Employee";
 
         [Column(TypeName = "nvarchar(50)")]

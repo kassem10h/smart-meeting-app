@@ -18,7 +18,7 @@ export default function Register() {
     setLoading(true)
     try {
       const body = { email, password, firstName, lastName, role }
-      await api.post("/Auth/register", body)
+      await api.post("/api/auth/register", body)
       alert("✅ Registration successful! You can now log in.")
       navigate("/")
     } catch (err) {

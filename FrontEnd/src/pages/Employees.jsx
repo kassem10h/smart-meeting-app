@@ -8,7 +8,7 @@ export default function Employees() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    api.get("/Employee")
+   api.get("/api/employee")
       .then(res => setRows(Array.isArray(res.data) ? res.data : [res.data]))
       .catch(err => setError(err.message));
   }, []);

@@ -8,7 +8,7 @@ export default function Meetings() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    api.get("/api/Meeting")
+    api.get("/api/meeting")
       .then(res => setRows(Array.isArray(res.data) ? res.data : [res.data]))
       .catch(err => setError(err.message));
   }, []);
